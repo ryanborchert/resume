@@ -1,0 +1,49 @@
+\documentclass[10pt,letterpaper]{article}
+
+% Import packages and setup
+\input{packages.tex}
+
+% Import variables
+\input{personal.tex}
+\input{summary_with_budget_size.tex}
+\input{competencies.tex}
+\input{certifications.tex}
+
+% Document starts here
+\begin{document}
+
+% Header
+\begin{center}
+    \textbf{\Huge \fullname} \\
+    \vspace{2pt}
+    \email \space {\large \divider{}} \phone \space {\large \divider{}} \location \\
+    \vspace{1pt}
+    \linkedin
+\end{center}
+
+% Professional Summary
+\noindent\professionalsummary
+
+% Core Competencies
+\section{Core Competencies}
+\noindent\corecompetencies
+
+% Work Experience
+\section{Work Experience}
+
+\input{experience.tex}
+
+% Education
+\section{Education}
+\noindent\position{\education}{\degree} \daterange{\graduationdate}
+\noindent\position{}{\schoollocation}
+
+% Technical Expertise
+\section{Technical Expertise}
+\noindent\technicalexpertise
+
+% Certifications
+\section{Certifications}
+\noindent\certifications
+
+\end{document}
