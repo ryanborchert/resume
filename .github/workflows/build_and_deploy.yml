@@ -22,7 +22,7 @@ jobs:
         run: |
           mkdir out
           cp ./ryan-f-borchert-resume.pdf ./out/ryan-f-borchert-resume.pdf
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: ryan-f-borchert-resume
           path: out/ryan-f-borchert-resume.pdf
