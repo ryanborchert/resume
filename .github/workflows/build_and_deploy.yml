@@ -1,10 +1,10 @@
-name: Build and Deploy Resume
+name: Deploy PDF
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
   workflow_dispatch:
 
@@ -21,8 +21,8 @@ jobs:
       - name: Copy
         run: |
           mkdir out
-          cp ./ryan-f-borchert-resume.pdf ./out/ryan-f-borchert-resume.pdf
-      - uses: actions/upload-artifact@v4
+          cp ./main.pdf ./out/ryan-f-borchert-resume.pdf
+      - uses: actions/upload-artifact@v2
         with:
           name: ryan-f-borchert-resume
           path: out/ryan-f-borchert-resume.pdf
